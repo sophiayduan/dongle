@@ -60,7 +60,7 @@
                     <h3 class="text-2xl lg:text-3xl font-geist font-medium lg:ml-1 mt-6">Design a PCB that plugs into your laptop, get prizes!</h3>
                     <p class="text-xl">//: Ends August 26th 11:59 EST</p>
                     <div class="flex items-center w-full gap-3 lg:gap-4">
-                    <p class="hidden lg:block lg:text-xl max-w-xl">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
+                    <p class="hidden lg:block lg:text-xl max-w-xl text-light-blue opacity-80">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
                     <div class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
                         <span>GUIDE</span>
                     </div>
@@ -92,15 +92,15 @@
              <div class='lg:w-[80%] lg:mx-auto'>
                 <h3 class="text-blue font-hk text-4xl">PROJECT IDEAS</h3>
                 <p class="text-blue">Check out other dongle-related Hack Clubber projects!</p>
-                <div class="mt-4 flex-col sm:flex-row flex items-center w-full border-4 border-blue sm:h-50 overflow-hidden">
+                <div class="mt-4 flex-col sm:flex-row flex items-center w-full border-4 border-blue sm:min-h-50 lg:h-100 overflow-hidden">
                     <div class="w-full sm:w-1/3 h-full grid grid-cols-1 grid-rows-1">
-                        <img src={comu} alt="cyao's comu" class="object-cover" />
+                        <img src={comu} alt="cyao's comu" class="object-cover aspect-auto" />
                     </div>
                     <div class="w-full sm:w-1/3 border-y-4 sm:border-y-0 sm:border-x-4 border-blue h-full flex items-center justify-center">
-                        <img src={usbhub} alt="hiral's usb hub" class="object-cover w-[80%] m-auto"/>
+                        <img src={usbhub} alt="hiral's usb hub" class="object-cover w-[80%] m-auto aspect-auto"/>
                     </div>
                     <div class="w-full sm:w-1/3 h-full bg-green-400">
-                        <img src={picoducky} alt="rudy's usb hub" class=" w-full h-full" />
+                        <img src={picoducky} alt="rudy's usb hub" class=" w-full h-full aspect-auto" />
                     </div>
                 </div>
                 <div class="mt-2 grid grid-cols-3 text-blue leading-snug text-sm gap-8 text-center opacity-0 sm:opacity-100">
@@ -132,7 +132,7 @@
                         <span class="">D</span>
                         <div class="xl:mx-1 grid grid-cols-1 grid-rows-1 place-items-center group">
                             <span class="col-start-1 row-start-1 leading-10">O</span>
-                            <img src={star} alt="" class="w-12 lg:w-20 col-start-1 row-start-1 animate-[spin_8s_linear_infinite]" />
+                            <img src={star} alt="" class="w-8 lg:w-12 col-start-1 row-start-1 animate-[spin_8s_linear_infinite]" />
                         </div>
                         <span class="">N</span>
                         <span class="">G</span>
