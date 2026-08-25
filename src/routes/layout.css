@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-hk: 'HK Grotesk', 'sans-serif';
+    --font-geist: 'Geist', 'sans-serif';
+    --font-mono: 'DMMono', 'sans-serif';
+    --color-blue: #0065D0;
+    --color-light-blue: #51E5FF;
+    --color-yellow: #FFEF16;
+    --color-red: #FE1C1C;
+    --color-black: #1c1c1c;
+
+}
+
+html {
+    background-color:var(--color-blue);
+    color:#ffffff;
+    font-family:var(--font-geist);
+    padding:0;
+    margin:0;
+}
+
+p, h1 {
+    margin:0;
+    padding:0;
+}
