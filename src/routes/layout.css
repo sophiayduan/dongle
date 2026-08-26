@@ -1,9 +1,31 @@
 @import 'tailwindcss';
+@font-face {
+  font-family: 'DM Mono';
+  src: url('./lib/DMMono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Geist';
+  src: url('./lib/Geist.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('./lib/HK_Grotesk.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
-    --font-hk: 'HK Grotesk', 'sans-serif';
-    --font-geist: 'Geist', 'sans-serif';
-    --font-mono: 'DMMono', 'sans-serif';
+    --font-hk: 'HK Grotesk', sans-serif;
+    --font-geist: 'Geist', sans-serif;
+    --font-mono: 'DM Mono', sans-serif;
     --color-blue: #0065D0;
     --color-light-blue: #51E5FF;
     --color-yellow: #FFEF16;
@@ -11,16 +33,9 @@
     --color-black: #1c1c1c;
 
 }
-@font-face {
-    font-family: 'DM Mono';
-    src: url('../lib/DMMono.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
 
-@theme {
-    --font-mono: 'DM Mono', monospace;
-}
+
+
 html {
     background-color:var(--color-blue);
     color:#ffffff;
