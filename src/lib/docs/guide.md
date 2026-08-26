@@ -186,6 +186,8 @@ Make sure you address them all!
 ## The Finish Line
 You made it to the end of this guide! If you have finished your board, or are stuck somewhere send a message in dongle —until next time!
 
+Once grants are sent out I'll elaborate more on purchasing with JLCPCB. Incase you're curious, you'll be needing ENIG (thin layer of gold) so it can handle many insertions.
+
 ![](/docs/images/Pasted%20image%2020260825211209.png)
 ## Programming Your Board
 Coming soon!
