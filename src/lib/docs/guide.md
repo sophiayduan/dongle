@@ -38,8 +38,6 @@ Next we are going to connect Pins 4&5 on the USB_A symbol (Shield & GND), to a g
 <details>
 	<summary>What is Ground?</summary>
 	Ground is the **common** reference point of a circuit. We call it 0 V, and the voltage of other circuit nodes is normally described relative to it. Ground is one large net, connected to any component that requires a return path (i.e. electrical)
-	
-
 </details>
 
 GND is a net name, meaning anything connected to the GND symbol will be connected to the ground net. 
@@ -112,6 +110,8 @@ For each item, search then select the correct footprint.
 | LED              | LED_SMD:LED_0805_2012Metric                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Button           | SW_SPST_TS-1088-xR020                                                                                                                                                                                                                                                                                                                                                                                                            |
 | USB Type-A Trace | [USB Type-A Trace](https://cdn.hackclub.com/01a03a68-baaa-7f39-a5ba-93c74dc27232/usb-a-trace.pretty.zip)<br>- Unzip the folder<br>- **Preferences -> Manage Footprint Libraries -> Global Libraries -> Click the +**<br>- Enter `CH552G` as the Nickname<br>- Click the empty Library Path section then press the folder icon that just appeared, and find the downloaded `CH552G.pretty`<br>- CH552G:CH552G is your footprint! |
+
+
 These packages (sizes) are specific to my project, feel free to adapt them to yours! Though, since our capacitors are for decoupling, I would not make them any larger. 
 
 ## Laying out the PCB

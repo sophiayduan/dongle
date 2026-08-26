@@ -1,6 +1,6 @@
 <script lang="ts">
     import { marked } from 'marked';
-    import guide from '$lib/docs/guide.md?raw';
+    import guide from '$lib/docs/project.md?raw';
 
     const html = marked(guide, { breaks: true });
 </script>

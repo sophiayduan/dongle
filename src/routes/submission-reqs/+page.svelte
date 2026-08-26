@@ -1,11 +1,11 @@
 <script lang="ts">
     import { marked } from 'marked';
-    import guide from '$lib/docs/guide.md?raw';
+    import guide from '$lib/docs/submitting.md?raw';
 
     const html = marked(guide, { breaks: true });
 </script>
 
-<main class="w-screen h-full flex flex-col gap-4 relative">
+<main class="w-screen h-full min-h-screen flex flex-col gap-4 relative">
     <div class="fixed w-fit h-fit right-0 bottom-0 sm:right-2 sm:bottom-2 flex flex-col items-end font-bold font-hk rounded-xs text-2xl p-6  gap-3">
         <a href="/project-guidelines" target="" class="mt-auto w-fit bg-yellow text-black  px-4 py-2 text-2xl hover:bg-red transition-all duration-300 h-fit shadow-md">GUIDELINES</a>
         <a href="/submission-reqs" target="" class="w-fit bg-red text-white  px-4 py-2 text-2xl hover:bg-black transition-all duration-300 h-fit shadow-md">SUBMITTING</a>
