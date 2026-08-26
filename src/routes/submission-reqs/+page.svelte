@@ -19,14 +19,14 @@
     </div>
 
     <div class="absolute -z-1 top-0 left-0 h-full w-screen opacity-60 select-none">
-        <div class="borders absolute top-0 left-0 h-3 sm:h-6 w-screen border-b pl-10 text-[8px] sm:text-sm flex items-end">//MANUFACTURER: HACK CLUB & SOPHIA
+        <div class="borders absolute top-0 left-0 h-5 sm:h-6 w-screen border-b pl-10 text-[10px] sm:text-sm flex items-end">//MANUFACTURER: HACK CLUB & SOPHIA
         </div>
-        <div class="absolute top-0 left-0 h-full w-3 sm:w-6 border-r text-[8px] sm:text-sm">
+        <div class="absolute top-0 left-0 h-full w-5 sm:w-6 border-r text-[10px] sm:text-sm">
             <div class="borders -rotate-90 translate-y-180 whitespace-nowrap">0x1234 Product ID:DONGLE-YSWS</div>
         </div>
-        <div class="absolute top-0 right-0 h-full w-3 sm:w-6 border-l">
+        <div class="absolute top-0 right-0 h-full w-5 sm:w-6 border-l">
         </div>
-        <div class="absolute bottom-0 left-0 h-3 sm:h-6 w-full border-t">
+        <div class="absolute bottom-0 left-0 h-5 sm:h-6 w-full border-t">
         </div>
     </div>
 </main>

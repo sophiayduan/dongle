@@ -60,9 +60,9 @@
                     <h3 class="text-2xl lg:text-3xl font-geist font-medium lg:ml-1 sm:mt-6">Design a PCB that plugs into your laptop, get prizes!</h3>
                     <p class="text-lg sm:text-xl">//: Ends August 27th 12:00PM EST</p>
                     <div class="flex items-center w-full gap-3 lg:gap-4">
-                    <p class="hidden lg:block lg:text-xl max-w-xl text-light-blue opacity-80">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
+                    <p class="hidden lg:block lg:text-lg max-w-xl text-light-blue opacity-80 leading-tight">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
                     <a href="/guide" class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-xl sm:text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
-                        <span>GUIDE</span>
+                        <span>GUIDES</span>
                     </a>
 
                     <a href="" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-xl sm:text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
@@ -79,7 +79,7 @@
             </section>
 
             <section class="w-full h-full px-6">
-            <div class="lg:w-[80%] lg:mx-auto p-4">
+            <div class="lg:w-[80%] lg:mx-auto p-4 mt-8">
                  <p class="p-8 sm:p-4"> <b>Design a PCB that plugs into your laptop directly or via a cable!</b> It should be fun, functional, and/or add flair to your laptop. <i>Not sure where to start? Checkout the <a class="underline font-bold" href="/guide">USB LED Dongle Guide</a> to make a computer control led board (It's beginner friendly!) and join us at <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a>  on Slack! </i>
                 </p>
                 <br/> 
