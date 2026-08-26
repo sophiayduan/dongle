@@ -153,7 +153,7 @@
                         <li><a href="https://hackclub.com" class="hover:font-semibold transition-all duration-40">Hack Club</a></li>
                         <li><a href="https://slack.hackclub.com" class="hover:font-semibold transition-all duration-40">Join our Slack</a></li>
                         <li><a href="https://hackclub.com/privacy-and-terms" class="hover:font-semibold transition-all duration-40" target="_blank">Privacy Policy</a></li>
-                        <li><a href="https://forms.hackclub.com/bounty" class="hover:font-semibold transition-all duration-40" target="_blank">FulFillment Bounty</a></li>
+                        <li><a href="https://forms.hackclub.com/bounty" class="hover:font-semibold transition-all duration-40" target="_blank">Fulfillment Bounty</a></li>
                     </ul>
                     <img src={flower} alt="" class="absolute bottom-14 right-14">    
                 </div>
