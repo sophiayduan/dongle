@@ -7,8 +7,12 @@ Some ideas:
 - Add physical buttons
 - Arrange the LEDs in a fun shape!
 
-This is the final board:
+Here is mine, yours will look different!
+#### The Final PCB:
 ![](/docs/images/Pasted%20image%2020260825211226.png)
+
+#### The Final Product!
+![](/docs/images/Pasted%20image%2020260826173235.png)
 
 We'll be using KiCAD, to create a new project click:
 **File -> New Project -> [Name your project] & save it**
@@ -29,7 +33,7 @@ Press "p" to open the Power Symbol Library (pressing "a" opens the entire symbol
 
 Press "w" or click on the node to start drawing wires connecting the VBUS pin on our USB Type-A symbol. 
 
-Here we are defining that the VBUS pin is connected to the VBUS net, this net will power the rest of the board!
+Here we are defining that the VBUS pin is connected to the VBUS net. This net will power the rest of the board!
 
 ![](/docs/images/Pasted%20image%2020260825090639.png)
 
@@ -38,17 +42,19 @@ Next we are going to connect Pins 4&5 on the USB_A symbol (Shield & GND), to a g
 <details>
 	<summary>What is Ground?</summary>
 	Ground is the **common** reference point of a circuit. We call it 0 V, and the voltage of other circuit nodes is normally described relative to it. Ground is one large net, connected to any component that requires a return path (i.e. electrical)
+	
+
 </details>
 
 GND is a net name, meaning anything connected to the GND symbol will be connected to the ground net. 
 
 ![](/docs/images/Pasted%20image%2020260825121833.png)
 
-Next, it's time to add our microcontroller (a.k.a MCU!), we'll be using the **CH552G** as it can communicate directly with a computer's USB port (no converter needed!), masquerade as a USB device (keyboard/mouse/etc), all while being easy-to-use and cost efficient!
+Next, it's time to add our microcontroller (a.k.a. MCU)! We'll be using the **CH552G** as it can communicate directly with a computer's USB port (no converter needed!), masquerade as a USB device (keyboard/mouse/etc), all while being easy-to-use and cost efficient!
 
 You can read its [datasheet](https://cdn-learn.adafruit.com/assets/assets/000/129/847/original/CH552DS1.PDF?1715004485) for more info, but everything you need for this project will be covered here.
 
-This MCU isn't native to KiCAD's libraries, so we'll be importing the symbol and footprint (we'll revisit the 3d model soon) ourselves.
+This MCU isn't native to KiCAD's libraries, so we'll be importing the symbol and footprint (we'll revisit the 3D model soon) ourselves.
 
 - [Symbol - CH552G.kicad_sym](https://cdn.hackclub.com/01a03b74-3c10-7f39-8e8c-29b16d6152e9/ch552g.kicad_sym)
 	- **Preferences -> Manage Symbol Libraries -> Global Libraries -> Click the +**
@@ -87,16 +93,16 @@ When the button is pushed down, D+ is pulled up through a 10k resistor to enter 
 ![](/docs/images/Pasted%20image%2020260825143812.png)
 
 Now it's time to add the LEDs! 
-I've used net labels again, and used each of my extra pins to drive a LED. 
+I've used net labels again, and used each of my extra pins to drive an LED. 
 
-For each LED I've placed a 330ohm resistor in series to limit the current going into the LED (to protect it!). This will be fairly bright and is approaching the MCU's pins limits.
+For each LED I've placed a 330Ω resistor in series to limit the current going into the LED (to protect it!). This will be fairly bright and is approaching the MCU's pins limits.
 
 >Here's where you could get especially creative, you can use these pins for so much more than just LEDs! I'm sticking with LEDs for simplicity and fun :)
 
 ![](/docs/images/Pasted%20image%2020260825210401.png)
 
 ### Assigning Footprints
-Footprints define the "land pattern" of an electronic component, meaning all it's markings, copper pads, holes for its specific component to be mounted to a PCB.
+Footprints define the "land pattern" of an electronic component, meaning all its markings, copper pads, holes needed to mount the component to the PCB.
 
 Click on the `Assign Footprints` button on the top bar, and a window will pop up.
 
@@ -110,8 +116,6 @@ For each item, search then select the correct footprint.
 | LED              | LED_SMD:LED_0805_2012Metric                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Button           | SW_SPST_TS-1088-xR020                                                                                                                                                                                                                                                                                                                                                                                                            |
 | USB Type-A Trace | [USB Type-A Trace](https://cdn.hackclub.com/01a03a68-baaa-7f39-a5ba-93c74dc27232/usb-a-trace.pretty.zip)<br>- Unzip the folder<br>- **Preferences -> Manage Footprint Libraries -> Global Libraries -> Click the +**<br>- Enter `CH552G` as the Nickname<br>- Click the empty Library Path section then press the folder icon that just appeared, and find the downloaded `CH552G.pretty`<br>- CH552G:CH552G is your footprint! |
-
-
 These packages (sizes) are specific to my project, feel free to adapt them to yours! Though, since our capacitors are for decoupling, I would not make them any larger. 
 
 ## Laying out the PCB
@@ -122,11 +126,31 @@ Here is where we turn the circuit we've defined in our schematic into a physical
 
 ![](/docs/images/Pasted%20image%2020260825181655.png)
 
-The first thing we are going to do is update our board thickness to 2.0mm this ensures that the board will fit snugly in the USB-A port.
+### Increasing the board thickness
+The default board thickness is 1.6mm, at this height, it will be too loose when plugged in! We need to increase the overall board thickness to fix this --in total your board needs to be 2.0mm thick.
+
+There are two ways to go about this: 
+1. Model a case --> 3D print it
+2. Increase the PCB's thickness
+
+The latter *greatly* increases production costs and I would *strongly* advise against it unless your project complexity and polish and justify it. (unsure? message in dongle)
+
+**Option 1: Model a case --> 3D print it**
+In total your board thickness must add up to 2.0mm. Here are two ways I recommend:
+1. Total PCB thickness of 1.0mm + 3D print a 1.0mm board
+	- Learn to change the thickness here, just replace the Dielectric 1 value with 0.91mm
+2. Total PCB thickness of 1.6mm + 3D print a 0.4mm board
+
+Learn how to do this in **Adding a Case** (scroll down!)
+
+**Option 2: Increase the PCB thickness**
+*(I don't recommend this option)*
+
+We are going to update our board thickness to 2.0mm, this ensures that the board will fit snugly in the USB-A port.
 
 **File -> Board Stackup -> Physical Stack up -> Update Dielectric1 to 1.91mm**
-
 This will make the overall board thickness add up to 2.0mm
+
 
 ![](/docs/images/Pasted%20image%2020260825202140.png)
 
@@ -134,20 +158,19 @@ Now, back to our layout! It's currently looking empty so let's click "F8" to bri
 
 ![](/docs/images/Pasted%20image%2020260825181843.png)
 
-Here is where you can go wild with your layout! I've seen everything from banana shaped boards to multiple boards stacked atop one another. 
+Here is where you can go wild with your layout! I've seen everything from banana-shaped boards to multiple boards stacked atop one another. 
 
 But before you get started, **here are some rules of thumb**:
 - Place your USB-A connector at the edge of your board with nothing on its left/right/front, so nothing blocks it from plugging into a port
 - Place your decoupling capacitors as close to its subsequent pin on the MCU as possible
 	- A larger distance adds additional resistance and inductance, meaning the capacitor cannot respond as quickly
 
-
 While you layout components, it's useful to see what they would look like in real life. To do so, press Alt+3 to open the 3D viewer!
 
 Here's my final layout:
 ![](/docs/images/Pasted%20image%2020260825191955.png)
 
-The edge cuts layer is where the board outline is defined!
+The `Edge.Cuts` layer is where the board outline is defined!
 There are some minimal drawing tools on the right, but for more complex outlines it is *much* easier to create it in an alternative software (e.g. Figma) and upload it as  DXF or SVG file.
 
 Follow the outline for the USB-A footprint on the `F.Fab` layer **this is crucial to ensure your board fits within the port!**
@@ -161,16 +184,16 @@ Make sure by the end of this project you have no ratsnests left!
 
 Press "X" to begin routing (drawing connections). Click on a pad to start and draw a trace based on your ratsnest.
 #### Power
-For the VBUS net we need to increase the trace width to accommodate the higher current it carries carry compared to our signal traces (like D+/D- or the LED pins). You can edit the trace width by pressing "e" while drawing a trace. Change the trace width from the default (0.2mm) to 0.5mm.
+For the VBUS net we need to increase the trace width to accommodate the higher current it carries compared to our signal traces (like D+/D- or the LED pins). You can edit the trace width by pressing "e" while drawing a trace. Change the trace width from the default (0.2mm) to 0.5mm.
 
 This isn't critical for such a short connection, but it is a good habit!
 
-Rather than routing GND as a bunch of individual traces, you draw a zone using the zone tool on the right bar and select the layers you want it on. Select the layers, F.Cu (top layer) and/or B.Cu (bottom layer), you want the pour to fill.
+Rather than routing GND as a bunch of individual traces, you draw a zone using the zone tool on the right bar. Select the layers you want the pour to fill: F.Cu (top) and/or B.Cu (bottom).
 
 ![](/docs/images/Pasted%20image%2020260825200522.png)
 
 #### Differential Pair
-You may have noticed that I have two ratsnests left! Those are special, as they carry data to and from the device (often a laptop) that it is connected to. Data is sent on both traces, and must arrive at the receiving end at the same time to avoid a mismatch; therefore, the length of the traces must be the same.
+You may have noticed that I have two ratsnests left! Those are special, as they carry data to and from the device (often a laptop) it's connected to. Data is sent on both traces, and must arrive at the receiving end at the same time to avoid a mismatch; therefore, the length of the traces must be the same.
 
 Select a D+/D- pad, and then press "6", this will force traces to be the same length, and it'll route both traces at once. 
 ![](/docs/images/Pasted%20image%2020260825201719.png)
@@ -183,11 +206,50 @@ Make sure you address them all!
 
 ![](/docs/images/Pasted%20image%2020260825201834.png)
 
-## The Finish Line
-You made it to the end of this guide! If you have finished your board, or are stuck somewhere send a message in dongle —until next time!
-
-Once grants are sent out I'll elaborate more on purchasing with JLCPCB. Incase you're curious, you'll be needing ENIG (thin layer of gold) so it can handle many insertions.
+## The Finished PCB! 
+You made it to the end of the PCB portion of this guide! If you have finished your board, or are stuck somewhere send a message in dongle!
 
 ![](/docs/images/Pasted%20image%2020260825211209.png)
+
+
+Although... the board is looking a little bare. Let's give it a case! 
+
+## Adding a Case
+Earlier, if you chose not to increase your PCB thickness to 2.0mm (which is the right decision, it's way overpriced) you'll be needing a case.
+
+At the bare minimum it needs to be beneath the USB footprint section of the PCB to increase the overall thickness. We'll be adding a thin layer under the entire PCB for simplicity.
+
+This guide uses Fusion 360 for 3D modelling. Feel free to use other software you're familiar with, just note that it may be harder to follow along.
+
+To begin, create a new project, we'll be making a `Part Design`. Here's what it looks like:
+
+![](/docs/images/Pasted%20image%2020260826120030.png)
+
+Make a new sketch. The plane you click is the one the sketch will be placed on.
+
+In KiCAD's PCB editor we'll export our board outline  **File --> Plot** with the following settings:
+
+![](/docs/images/Pasted%20image%2020260826165651.png)
+
+We are exporting the Edge.Cuts layer in millimeters. Press "Plot" to export the DXF.
+
+In Fusion 360, under `Insert` select `Insert DXF`
+![](/docs/images/Pasted%20image%2020260826170839.png)
+
+Press "e" to begin extruding and select your sketch. Here I've given the model a height of 0.4mm as my board is 1.6mm in total thickness. This may vary depending on your board thickness.
+
+This model is the bare minimum! It's just enough so that the board fits snugly, and needs adhesive to be attached. 
+
+![](/docs/images/Pasted%20image%2020260826173307.png)
+
+**File --> Export --> Choose `STEP Files (*.step)` --> Export**, repeat this for `.f3d` and add these to your repository! 
+
+You can make something much cooler than the above, here's what I ended up with:
+![](/docs/images/Pasted%20image%2020260826172506.png)
+
+## The Finished CAD
+This is what it looks like with the PCB inside! Now we're done with the hardware design. 
+
+![](/docs/images/Pasted%20image%2020260826173235.png)
 ## Programming Your Board
 Coming soon!
