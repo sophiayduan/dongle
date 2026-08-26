@@ -45,7 +45,7 @@
             <section class="hero lg:w-[80%] mx-auto lg:h-screen flex flex-col py-14 lg:pt-24 p-6 ">
                 <div class="flex flex-col items-start justify-center gap-2 h-fit px-4">
 
-                    <h1 class="text-[16vw] font-bold font-hk leading-30 lg:leading-50 flex items-center">
+                    <h1 class="text-[16vw] font-bold font-hk leading-20 sm:leading-30 lg:leading-50 flex items-center">
                         <span class="leading-20 lg:leading-60">D</span>
                         <div class="xl:mx-1 grid grid-cols-1 grid-rows-1 place-items-center group">
                             <span class="col-start-1 row-start-1 leading-20 lg:leading-30">O</span>
@@ -57,15 +57,15 @@
                         <span class="leading-20 lg:leading-30">E</span>
                     </h1>
 
-                    <h3 class="text-2xl lg:text-3xl font-geist font-medium lg:ml-1 mt-6">Design a PCB that plugs into your laptop, get prizes!</h3>
-                    <p class="text-xl">//: Ends August 27th 12:00PM EST</p>
+                    <h3 class="text-2xl lg:text-3xl font-geist font-medium lg:ml-1 sm:mt-6">Design a PCB that plugs into your laptop, get prizes!</h3>
+                    <p class="text-lg sm:text-xl">//: Ends August 27th 12:00PM EST</p>
                     <div class="flex items-center w-full gap-3 lg:gap-4">
                     <p class="hidden lg:block lg:text-xl max-w-xl text-light-blue opacity-80">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
-                    <a href="/guide" class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
+                    <a href="/guide" class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-xl sm:text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
                         <span>GUIDE</span>
                     </a>
 
-                    <a href="" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
+                    <a href="" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-xl sm:text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
                         <span>SUBMIT</span>
                         <div class="bg-white p-1 aspect-square rounded-sm">
                             <svg class="w-6 sm:w-8" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@
 
             <section class="w-full h-full px-6">
             <div class="lg:w-[80%] lg:mx-auto p-4">
-                 <p class="p-4"> <b>Design a PCB that plugs into your laptop directly or via a cable!</b> It should be fun, functional, and/or add flair to your laptop. <i>Not sure where to start? Checkout the <a class="underline font-bold" href="/guide">USB LED Dongle Guide</a> to make a computer control led board (It's beginner friendly!) and join us at <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a>  on Slack! </i>
+                 <p class="p-8 sm:p-4"> <b>Design a PCB that plugs into your laptop directly or via a cable!</b> It should be fun, functional, and/or add flair to your laptop. <i>Not sure where to start? Checkout the <a class="underline font-bold" href="/guide">USB LED Dongle Guide</a> to make a computer control led board (It's beginner friendly!) and join us at <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a>  on Slack! </i>
                 </p>
                 <br/> 
                 <p>Time working on your project should be tracked within a <span class="rounded-xs px-1 py-px mx-1 bg-yellow font-bold text-black">JOURNAL.md</span>
