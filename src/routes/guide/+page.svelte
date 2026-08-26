@@ -6,7 +6,7 @@
 </script>
 
 <main class="w-screen h-full flex flex-col gap-4 relative">
-        <a href="/" target="" class="fixed top-4 right-4 sm:bottom-10 sm:right-10 bg-red text-white font-bold font-hk rounded-xs px-4 py-2 text-2xl hover:bg-black transition-all duration-300">RETURN</a>
+        <a href="/" target="" class="fixed top-4 right-4 sm:bottom-10 sm:right-10 bg-red text-white font-bold font-hk rounded-xs px-4 py-2 text-2xl hover:bg-black transition-all duration-300 h-fit">RETURN</a>
 
     <div class="markdown-body px-8 sm:px-14 py-6 pb-10 lg:w-[80%] lg:mx-auto">
         {@html html}
