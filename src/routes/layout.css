@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @font-face {
   font-family: 'DM Mono';
-  src: url('./lib/DMMono.ttf') format('truetype');
+  src: url('../lib/DMMono.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Geist';
-  src: url('./lib/Geist.ttf') format('truetype');
+  src: url('../lib/Geist.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'HK Grotesk';
-  src: url('./lib/HK_Grotesk.otf') format('opentype');
+  src: url('../lib/HK_Grotesk.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
