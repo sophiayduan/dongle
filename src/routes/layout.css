@@ -11,7 +11,16 @@
     --color-black: #1c1c1c;
 
 }
+@font-face {
+    font-family: 'DM Mono';
+    src: url('../lib/DMMono.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
+@theme {
+    --font-mono: 'DM Mono', monospace;
+}
 html {
     background-color:var(--color-blue);
     color:#ffffff;
@@ -24,3 +33,4 @@ p, h1 {
     margin:0;
     padding:0;
 }
+

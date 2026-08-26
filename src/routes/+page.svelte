@@ -61,18 +61,18 @@
                     <p class="text-xl">//: Ends August 26th 11:59 EST</p>
                     <div class="flex items-center w-full gap-3 lg:gap-4">
                     <p class="hidden lg:block lg:text-xl max-w-xl text-light-blue opacity-80">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
-                    <div class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
+                    <a href="/guide" class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
                         <span>GUIDE</span>
-                    </div>
+                    </a>
 
-                    <div href="/guides" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
+                    <a href="" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
                         <span>SUBMIT</span>
                         <div class="bg-white p-1 aspect-square rounded-sm">
                             <svg class="w-6 sm:w-8" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.5 29.7628L29.7628 2.5M2.5 2.5H29.7628V29.7628" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                    </div>                     
+                    </a>                     
                     </div>
                 </div>
                 <img src={port} alt="" class="w-full px-4 lg:px-0" />
@@ -80,7 +80,7 @@
 
             <section class="w-full h-full px-6">
             <div class="lg:w-[80%] lg:mx-auto p-4">
-                 <p class="p-4"> <b>Design a PCB that plugs into your laptop directly or via a cable!</b> It should be fun, functional, and/or add flair to your laptop. <i>Not sure where to start? Checkout the <span class="underline font-bold">USB LED Dongle Guide</span> to make a computer control led board (It's beginner friendly!) and join us at <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a>  on Slack! </i>
+                 <p class="p-4"> <b>Design a PCB that plugs into your laptop directly or via a cable!</b> It should be fun, functional, and/or add flair to your laptop. <i>Not sure where to start? Checkout the <a class="underline font-bold" href="/guide">USB LED Dongle Guide</a> to make a computer control led board (It's beginner friendly!) and join us at <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a>  on Slack! </i>
                 </p>
                 <br/> 
                 <p>Time working on your project should be tracked within a <span class="rounded-xs px-1 py-px mx-1 bg-yellow font-bold text-black">JOURNAL.md</span>
@@ -92,26 +92,34 @@
              <div class='lg:w-[80%] lg:mx-auto'>
                 <h3 class="text-blue font-hk text-4xl">PROJECT IDEAS</h3>
                 <p class="text-blue">Check out other dongle-related Hack Clubber projects!</p>
-                <div class="mt-4 flex-col sm:flex-row flex items-center w-full border-4 border-blue sm:min-h-50 lg:h-100 overflow-hidden">
-                    <div class="w-full sm:w-1/3 h-full grid grid-cols-1 grid-rows-1">
-                        <img src={comu} alt="cyao's comu" class="object-cover aspect-auto" />
-                    </div>
-                    <div class="w-full sm:w-1/3 border-y-4 sm:border-y-0 sm:border-x-4 border-blue h-full flex items-center justify-center">
-                        <img src={usbhub} alt="hiral's usb hub" class="object-cover w-[80%] m-auto aspect-auto"/>
-                    </div>
-                    <div class="w-full sm:w-1/3 h-full bg-green-400">
-                        <img src={picoducky} alt="rudy's usb hub" class=" w-full h-full aspect-auto" />
+
+                <div class="mt-4 flex-col sm:flex-row flex items-center w-full border-4 border-blue overflow-hidden">
+                    <div
+                        class="w-full sm:w-1/3 h-70 sm:h-50 md:h-80 lg:h-100 bg-cover bg-center"
+                        style={`background-image: url(${comu})`}
+                    ></div>
+
+                    <div
+                        class="w-full sm:w-1/3 h-70 sm:h-50 md:h-80 lg:h-100 bg-contain bg-no-repeat bg-center border-y-4 sm:border-y-0 sm:border-x-4  border-blue"
+                        style={`background-image: url(${usbhub});`}
+                    ></div>
+
+                    <div class="w-full sm:w-1/3 h-70 sm:h-50 md:h-80 lg:h-100">
+                        <img
+                            src={picoducky}
+                            alt="rudy's usb hub"
+                            class="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
+
                 <div class="mt-2 grid grid-cols-3 text-blue leading-snug text-sm gap-8 text-center opacity-0 sm:opacity-100">
                     <p class="">By @Cyao, an 18-year-old from France!</p>
                     <p class="">By @Hiral, a 17-year-old from India!</p>
                     <p class="">By @Rudy, a teen from Canada!</p>
 
                 </div>
-            </div>
-
-             <div class="mt-6 lg:m-6 lg:w-[80%] lg:mx-auto bg-white h-fit text-black">
+             <!-- <div class="mt-6 lg:m-6 lg:w-[80%] lg:mx-auto bg-white h-fit text-black">
             <div class="flex gap-4 items-center">
                 <h3 class="text-black font-hk text-4xl">PRIZES</h3>
                 <img src={flower} alt="" class="inline h-10" />
@@ -121,10 +129,10 @@
 
             <h4 class="mt-4 bg-yellow p-1 px-4 rounded-sm font-bold w-fit">TIER 2: 16 GB Flash Drive</h4>
             <li class="ml-6 mt-2">Unique, high-quality projects will receive this on top of Hack Club stickers! If you're unsure your project will qualify, send it in <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a> :)</li>
-            </div>
+            </div> -->
         
-            </div>
-                
+                    </div>
+                </div>
             </section>
             <footer class="w-full h-80 mb-6 px-6 mt-2">
                 <div class="bg-light-blue w-full h-full px-4 flex flex-col pt-4">
@@ -147,15 +155,8 @@
                         <li><a href="https://hackclub.com/privacy-and-terms" class="hover:font-semibold transition-all duration-40" target="_blank">Privacy Policy</a></li>
                         <li><a href="https://forms.hackclub.com/bounty" class="hover:font-semibold transition-all duration-40" target="_blank">FulFillment Bounty</a></li>
                     </ul>
-                    <img src={flower} alt="" class="absolute bottom-14 right-14">
-
-                    
-                    
-
+                    <img src={flower} alt="" class="absolute bottom-14 right-14">    
                 </div>
-                
-               
-
             </footer>
             
             <!-- lines -->
