@@ -108,7 +108,7 @@
 
     :global(.markdown-body pre code) {
         background: none;
-        color: var(--color-light-blue)
+        color: var(--color-light-blue);
         padding: 0;
     }
 

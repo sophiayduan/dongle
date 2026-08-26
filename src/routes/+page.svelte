@@ -58,7 +58,7 @@
                     </h1>
 
                     <h3 class="text-2xl lg:text-3xl font-geist font-medium lg:ml-1 mt-6">Design a PCB that plugs into your laptop, get prizes!</h3>
-                    <p class="text-xl">//: Ends August 26th 11:59 EST</p>
+                    <p class="text-xl">//: Ends August 27th 12:00PM EST</p>
                     <div class="flex items-center w-full gap-3 lg:gap-4">
                     <p class="hidden lg:block lg:text-xl max-w-xl text-light-blue opacity-80">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
                     <a href="/guide" class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
