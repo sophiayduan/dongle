@@ -7,10 +7,12 @@
 
 <main class="w-screen h-full flex flex-col gap-4 relative">
     <div class="fixed w-fit h-fit right-0 bottom-0 sm:right-2 sm:bottom-2 flex flex-col items-end font-bold font-hk rounded-xs text-2xl p-6  gap-3">
+        <a href="/guide" target="" class="mt-auto w-fit bg-white text-red  px-4 py-2 text-2xl hover:bg-black transition-all duration-300 h-fit shadow-md">DONGLE GUIDE</a>
         <a href="/project-guidelines" target="" class="mt-auto w-fit bg-yellow text-black  px-4 py-2 text-2xl hover:bg-red transition-all duration-300 h-fit shadow-md">GUIDELINES</a>
         <a href="/submission-reqs" target="" class="w-fit bg-red text-white  px-4 py-2 text-2xl hover:bg-black transition-all duration-300 h-fit shadow-md">SUBMITTING</a>
         <a href="/" target="" class="w-fit bg-light-blue text-black  px-4 py-2 text-2xl hover:bg-red transition-all duration-300 h-fit shadow-md">HOME</a>
     </div>
+        
         
 
 
