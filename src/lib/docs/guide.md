@@ -133,7 +133,7 @@ There are two ways to go about this:
 1. Model a case --> 3D print it
 2. Increase the PCB's thickness
 
-The latter *greatly* increases production costs and I would *strongly* advise against it unless your project complexity and polish and justify it. (unsure? message in dongle)
+The latter *greatly* increases production costs and I would *strongly* advise against it unless your project complexity and polish and justify it. (unsure? message in [#dongle](https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS))
 
 **Option 1: Model a case --> 3D print it**
 In total your board thickness must add up to 2.0mm. Here are two ways I recommend:
@@ -207,7 +207,7 @@ Make sure you address them all!
 ![](/docs/images/Pasted%20image%2020260825201834.png)
 
 ## The Finished PCB! 
-You made it to the end of the PCB portion of this guide! If you have finished your board, or are stuck somewhere send a message in dongle!
+You made it to the end of the PCB portion of this guide! If you have finished your board, or are stuck somewhere send a message in [#dongle](https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS)!
 
 ![](/docs/images/Pasted%20image%2020260825211209.png)
 
@@ -252,4 +252,70 @@ This is what it looks like with the PCB inside! Now we're done with the hardware
 
 ![](/docs/images/Pasted%20image%2020260826173235.png)
 ## Programming Your Board
-Coming soon!
+We'll be using the [CH55xduino](https://github.com/DeqingSun/ch55xduino/tree/ch55xduino) as it is one of the simplest ways to program our MCU. It simplifies the complicated set up for our MCU and lets us flash the chip (upload the code) with one click.
+
+> If you want a seriously low level challenge, look into [Keil C51](http://www.keil.com/c51/) or [SDCC](https://sdcc.sourceforge.net/), both methods to program the CH552G. CH55xduino is actually bundling SDCC under the hood.
+
+Install the [Arduino IDE](https://www.arduino.cc/en/software/).  In **File --> Preferences --> Settings tab --> Additional Boards Manager URLs** enter:
+
+`https://raw.githubusercontent.com/DeqingSun/ch55xduino/ch55xduino/package_ch55xduino_mcs51_index.json`
+
+This is to add the CH55xduino as a Board Manager (board managers allow your computer to communicate with a board that doesn't come preinstalled), as it isn't one of Arduino's defaults. 
+
+![](/docs/images/image-1.png)
+
+
+Go to **Tools --> Board:"" --> Boards Manager --> Find CH55xduino by typing "ch" --> Click Install** 
+
+Here we are installing the CH55xduino board manager.
+![](/docs/images/image.png)
+
+
+Now you should find a new entry CH55x Boards in the list at **Tools --> Board --> CH55x Boards**
+
+Choose CH552 Board from the list
+![](/docs/images/image-4.png)
+Open the standard Blink example from **File -->Examples -->01. Basics -->Blink.** This will give you some basic code to make an LED flash!
+![](/docs/images/image-2.png)
+
+Change the pin number in Blink example. For example, if you have an LED you want to blink on P3.0, you will write pin 30. Here I'm using P1.1, pin 11.
+
+> #define LED_BUILTIN 11 // pin P1.1
+> 
+> // the setup function runs once when you press reset or power the board
+> 
+> **void setup() {**
+>
+> // initialize digital pin LED_BUILTIN as an output.
+>
+> pinMode(LED_BUILTIN, OUTPUT);
+>
+> **}**
+> 
+> // the loop function runs over and over again forever
+>
+> **void loop() {**
+>
+> digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+>
+> delay(1000);                                   // wait for a second
+>
+> digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+>
+> delay(1000);                                   // wait for a second
+>
+> **}**
+
+Once you receive your board:
+- Compile it by hitting Verify
+- Hold the button down, then plug in the USB cable while still holding it. Release the button once it's plugged in. This puts the board in bootloader (a.k.a. programming) mode.
+- If you have used CH55xduino once and your code doesn't crash the USB subsystem, you can simply press Upload. Arduino and the firmware will kick the chip into the bootloader automatically.
+
+
+This is the baseline firmware you need to [submit](https://forms.hackclub.com/dongle) your dongle! Modify it to work with your project. Keep in mind that the more you code ahead of time, the more polish you are adding!
+
+If you're not sure how to continue programming your board, check out the following resources:
+- [CH55xduino](https://github.com/DeqingSun/ch55xduino/tree/ch55xduino)
+- CH55xduino examples - We used "Blink", but there are plenty more!
+- [Arduino Programming Language Docs](https://docs.arduino.cc/language-reference/)
+- [Paul McWhorter's Arduino Lessons Playlist](https://www.youtube.com/watch?v=d8_xXNcGYgo&list=PLGs0VKk2DiYx6CMdOQR_hmJ2NbB4mZQn-)
