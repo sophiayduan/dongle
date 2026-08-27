@@ -247,8 +247,37 @@ This model is the bare minimum! It's just enough so that the board fits snugly, 
 You can make something much cooler than the above, here's what I ended up with:
 ![](/docs/images/Pasted%20image%2020260826172506.png)
 
+
 ## The Finished CAD
-This is what it looks like with the PCB inside! Now we're done with the hardware design. 
+The last thing we need to do in terms of hardware is **create a final assembly!** This means a CAD file that contains all the components of your project, electronics included.
+
+Let's start off by importing our PCB into Fusion 360! In KiCAD's PCB Editor go to **File --> Export --> STEP**. Then in Fusion 360, in a new `Part Design` under **File --> Upload your STEP file.**
+
+![](/docs/images/image-12.png)
+
+Looks good; However, as you can see from the left hand bar, there are tons of unpositioned individual components. Meaning when you move the PCB, the components won't move with it.
+
+To solve this, we are going to make all the components' positions rigid relative to each other. 
+
+
+**Select everything --> Assemble --> Rigid Group**
+![](/docs/images/image-7.png)
+
+Now let's assemble our project, we'll do so by creating a `New Project` and selecting `Assembly Design` (instead of Part Design like we did previously)
+
+Open up the data panel and insert each model into the design.
+![](/docs/images/image-9.png)
+
+> I had to rotate my PCB first by pressing "m" to enter "MOVE/COPY" mode. This board could have also been rotated while inserting it into the design. Otherwise the components would end up joined at a 90 degree angle.
+
+
+Under relationships, choose `Constrain Components`. We'll be using the default constraint type, "Align".
+
+![](/docs/images/image-10.png)
+
+On each component, select a face/edge/point that sits flush with the corresponding face/edge point on the other component. This may take a few tries to get right!
+![](/docs/images/image-11.png)
+This is what it looks like with the PCB inside -- and **now we're done with the hardware design!**
 
 ![](/docs/images/Pasted%20image%2020260826173235.png)
 ## Programming Your Board
@@ -309,7 +338,7 @@ Change the pin number in Blink example. For example, if you have an LED you want
 Once you receive your board:
 - Compile it by hitting Verify
 - Hold the button down, then plug in the USB cable while still holding it. Release the button once it's plugged in. This puts the board in bootloader (a.k.a. programming) mode.
-- If you have used CH55xduino once and your code doesn't crash the USB subsystem, you can simply press Upload. Arduino and the firmware will kick the chip into the bootloader automatically.
+- The CH552 uses the same USB connection for both running your program and uploading new code. Thus, if your code causes and odd bug, the chip and lose it's connection to your computer --> you'll crash the USB system. If this happens, fix the code and repeat the step above
 
 
 This is the baseline firmware you need to [submit](https://forms.hackclub.com/dongle) your dongle! Modify it to work with your project. Keep in mind that the more you code ahead of time, the more polish you are adding!
