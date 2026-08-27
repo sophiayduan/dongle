@@ -65,7 +65,7 @@
                         <span>GUIDES</span>
                     </a>
 
-                    <a href="" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-xl sm:text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
+                    <a href="https://forms.hackclub.com/dongle" class="mb-4 p-2 lg:p-4 mt-4 lg:mt-0  bg-red font-hk text-xl sm:text-3xl lg:text-5xl flex gap-4 items-center hover:bg-black hover:cursor-pointer rounded-sm transition-all duration-200 group">
                         <span>SUBMIT</span>
                         <div class="bg-white p-1 aspect-square rounded-sm">
                             <svg class="w-6 sm:w-8" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
