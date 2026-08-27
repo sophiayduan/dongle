@@ -1,0 +1,8 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C2",0603,2,100nF,
+"D1, D2, D3, D4, D5, D6, D7, D8, D9",0805,9,LED,
+J1,USB-A,1,USB_A,
+R1,0603,1,10k,
+"R10, R2, R3, R4, R5, R6, R7, R8, R9",0603,9,330R,
+SW1,SW_SPST_TS-1088-xR020,1,SW_Push,
+U1,CH552G,1,CH552G,
