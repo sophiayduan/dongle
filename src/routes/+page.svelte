@@ -119,17 +119,17 @@
                     <p class="">By @Rudy, a teen from Canada!</p>
 
                 </div>
-             <!-- <div class="mt-6 lg:m-6 lg:w-[80%] lg:mx-auto bg-white h-fit text-black">
+             <div class="my-12 bg-white h-fit text-black">
             <div class="flex gap-4 items-center">
                 <h3 class="text-black font-hk text-4xl">PRIZES</h3>
                 <img src={flower} alt="" class="inline h-10" />
             </div>
             <h4 class="mt-4 bg-yellow p-1 px-4 rounded-sm font-bold w-fit">TIER 1: Hack Club Stickers</h4>
-            <li class="ml-6 mt-2">Hand-picked HC stickers -- I'll ship you some special ones!</li>
+            <li class="ml-6 mt-2">Hand-picked HC stickers - I'll ship you some special ones!</li>
 
             <h4 class="mt-4 bg-yellow p-1 px-4 rounded-sm font-bold w-fit">TIER 2: 16 GB Flash Drive</h4>
             <li class="ml-6 mt-2">Unique, high-quality projects will receive this on top of Hack Club stickers! If you're unsure your project will qualify, send it in <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a> :)</li>
-            </div> -->
+            </div>
         
                     </div>
                 </div>
