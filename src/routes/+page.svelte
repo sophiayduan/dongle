@@ -18,8 +18,8 @@
                     const { ScrambleTextPlugin } = await import('gsap/all');
                     if (cancelled) return;
 
-                    gsap.registerPlugin(ScrambleTextPlugin) 
-                    
+                    gsap.registerPlugin(ScrambleTextPlugin)
+
                     const borders = document.querySelectorAll('borders')
                     gsap.to(borders, {
                         duration:5,
@@ -28,7 +28,7 @@
                         scrambleText: "XXXXXXXXXXXX"
                     });
 
-                })(); 
+                })();
 
 
                 return () => {
@@ -58,7 +58,7 @@
                     </h1>
 
                     <h3 class="text-2xl lg:text-3xl font-geist font-medium lg:ml-1 sm:mt-6">Design a PCB that plugs into your laptop, get prizes!</h3>
-                    <p class="text-lg sm:text-xl">//: Ends August 27th 12:00PM EST</p>
+                    <p class="text-lg sm:text-xl">//: Ended August 28th. <i>Reopens soon.</i></p>
                     <div class="flex items-center w-full gap-3 lg:gap-4">
                     <p class="hidden lg:block lg:text-lg max-w-xl text-light-blue opacity-80 leading-tight">Dongles are a piece of hardware that when plugged in a laptop (or tv/phone/etc!) port add a feature. </p>
                     <a href="/guide" class="mt-4 lg:mt-0 lg:ml-auto mb-4 p-2 lg:p-4 bg-yellow font-hk text-xl sm:text-3xl lg:text-5xl text-black hover:bg-light-blue transition-all duration-100 hover:cursor-pointer w-fit rounded-sm">
@@ -72,7 +72,7 @@
                             <path d="M2.5 29.7628L29.7628 2.5M2.5 2.5H29.7628V29.7628" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                    </a>                     
+                    </a>
                     </div>
                 </div>
                 <img src={port} alt="" class="w-full px-4 lg:px-0" />
@@ -82,12 +82,12 @@
             <div class="lg:w-[80%] lg:mx-auto p-4 mt-8">
                  <p class="p-8 sm:p-4"> <b>Design a PCB that plugs into your laptop directly or via a cable!</b> It should be fun, functional, and/or add flair to your laptop. <i>Not sure where to start? Checkout the <a class="underline font-bold" href="/guide">USB LED Dongle Guide</a> to make a computer control led board (It's beginner friendly!) and join us at <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a>  on Slack! </i>
                 </p>
-                <br/> 
+                <br/>
                 <p>Time working on your project should be tracked within a <span class="rounded-xs px-1 py-px mx-1 bg-yellow font-bold text-black">JOURNAL.md</span>
                 in your code repository, and be sure to <span class="rounded-xs px-1 py-px mx-1 bg-yellow font-bold text-black">include a BOM</span> in the README.md!
                 </p>
             </div>
-           
+
             <div class="mt-8 w-full h-full p-4 bg-white py-8">
              <div class='lg:w-[80%] lg:mx-auto'>
                 <h3 class="text-blue font-hk text-4xl">PROJECT IDEAS</h3>
@@ -130,7 +130,7 @@
             <h4 class="mt-4 bg-yellow p-1 px-4 rounded-sm font-bold w-fit">TIER 2: 16 GB Flash Drive</h4>
             <li class="ml-6 mt-2">Unique, high-quality projects will receive this on top of Hack Club stickers! If you're unsure your project will qualify, send it in <a href="https://hackclub.enterprise.slack.com/archives/C0BT2TGD6BS" target="_blank" class="underline">#dongle</a> :)</li>
             </div>
-        
+
                     </div>
                 </div>
             </section>
@@ -155,16 +155,16 @@
                         <li><a href="https://hackclub.com/privacy-and-terms" class="hover:font-semibold transition-all duration-40" target="_blank">Privacy Policy</a></li>
                         <li><a href="https://forms.hackclub.com/bounty" class="hover:font-semibold transition-all duration-40" target="_blank">Fulfillment Bounty</a></li>
                     </ul>
-                    <img src={flower} alt="" class="absolute bottom-14 right-14">    
+                    <img src={flower} alt="" class="absolute bottom-14 right-14">
                 </div>
             </footer>
-            
+
             <!-- lines -->
             <div class="absolute -z-1 top-0 left-0 h-full w-screen opacity-60 select-none">
-                <div class="borders absolute top-0 left-0 h-6 w-screen border-b pl-10 text-sm flex items-end ">//MANUFACTURER: HACK CLUB & SOPHIA
+                <div class="borders absolute top-0 left-0 h-6 w-screen border-b pl-10 text-sm flex items-end ">//MANUFACTURER: HACK CLUB & SOPHIA DUAN
                 </div>
                 <div class="absolute top-0 left-0 h-full w-6 border-r text-sm">
-                    <div class="borders -rotate-90 translate-y-180 whitespace-nowrap">0x1234 Product ID:DONGLE-YSWS</div> 
+                    <div class="borders -rotate-90 translate-y-180 whitespace-nowrap">0x1234 Product ID:DONGLE-YSWS</div>
                 </div>
                 <div class="absolute top-0 right-0 h-full w-6 border-l">
                 </div>
